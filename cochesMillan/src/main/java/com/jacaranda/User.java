@@ -1,16 +1,22 @@
 package com.jacaranda;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
-import java.time.LocalDate;
-
+@Entity
+@Table(name="userDB")
 public class User {
-
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String user;
 	private String password;
 	private String name;
 	private String surname;
 	private boolean gender;
-	private LocalDate birthday; 
+	private String birthday; 
 	private boolean administrador;
 	
 	//constructores
@@ -25,7 +31,7 @@ public class User {
 		administrador  =false;
 	}
 	
-	public User(String user, String password, String name, String surname, boolean gender, LocalDate birthday,
+	public User(String user, String password, String name, String surname, boolean gender, String birthday,
 			boolean administrador) {
 		super();
 		this.user = user;
@@ -88,11 +94,11 @@ public class User {
 		this.gender = gender;
 	}
 
-	public LocalDate getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(LocalDate birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 
