@@ -1,4 +1,5 @@
 package com.jacaranda;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -11,7 +12,8 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	private String user;
+	@Column(name="user")
+	private String nick;
 	private String password;
 	private String name;
 	private String surname;
@@ -22,7 +24,7 @@ public class User {
 	//constructores
 	public User() {
 		super();
-		user = null;
+		nick = null;
 		password = null;
 		name = null;
 		surname = null;
@@ -31,10 +33,10 @@ public class User {
 		administrador  =false;
 	}
 	
-	public User(String user, String password, String name, String surname, boolean gender, String birthday,
+	public User(String nick, String password, String name, String surname, boolean gender, String birthday,
 			boolean administrador) {
 		super();
-		this.user = user;
+		this.nick = nick;
 		this.password = password;
 		this.name = name;
 		this.surname = surname;
@@ -54,12 +56,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getUser() {
-		return user;
+	public String getNick() {
+		return nick;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 
 	public String getPassword() {

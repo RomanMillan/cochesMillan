@@ -12,7 +12,7 @@ public class UserControl {
 		return valid;
 	}
 	
-	public static boolean addUser( User user) {
+	public static boolean addUser(User user) {
 		boolean add = false;
 		try {
 			ConnectionDAO.getSession().save(user);
