@@ -19,7 +19,7 @@ public class User {
 	private String surname;
 	private boolean gender;
 	private String birthday; 
-	private boolean administrador;
+	private boolean administrator;
 	
 	//constructores
 	public User() {
@@ -30,11 +30,11 @@ public class User {
 		surname = null;
 		gender  = false;
 		birthday = null;
-		administrador  =false;
+		administrator  =false;
 	}
 	
 	public User(String nick, String password, String name, String surname, boolean gender, String birthday,
-			boolean administrador) {
+			boolean administrator) {
 		super();
 		this.nick = nick;
 		this.password = password;
@@ -42,7 +42,7 @@ public class User {
 		this.surname = surname;
 		this.gender = gender;
 		this.birthday = birthday;
-		this.administrador = administrador;
+		this.administrator = administrator;
 	}
 
 
@@ -104,12 +104,12 @@ public class User {
 		this.birthday = birthday;
 	}
 
-	public boolean isAdministrador() {
-		return administrador;
+	public boolean isAdministrator() {
+		return administrator;
 	}
 
-	public void setAdministrador(boolean administrador) {
-		this.administrador = administrador;
+	public void setAdministrator(boolean administrator) {
+		this.administrator = administrator;
 	}
 
 	//HashCode and Equals

@@ -25,7 +25,15 @@
 			}
 			
 			//Insertamos los datos
-			User u = new User(user,password,name,surname,genderB,birthday,administrador);
+			//User u = new User(user,password,name,surname,genderB,birthday,administrador);
+			User u = new User();
+			u.setAdministrator(administrador);
+			u.setGender(genderB);
+			u.setName(name);
+			u.setNick(user);
+			u.setPassword(password);
+			u.setSurname(surname);
+			
 			UserControl.addUser(u);
 			
 		%>
