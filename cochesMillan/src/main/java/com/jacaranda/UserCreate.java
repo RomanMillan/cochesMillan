@@ -61,7 +61,7 @@ public class UserCreate extends HttpServlet {
 		u.setPassword(password);
 		u.setSurname(surname);
 		
-		//UserControl.addUser(u);
+		UserControl.addUser(u);
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html><body>");

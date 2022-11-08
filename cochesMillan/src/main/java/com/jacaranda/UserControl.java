@@ -15,8 +15,9 @@ public class UserControl {
 	public static boolean addUser(User user) {
 		boolean add = false;
 		try {
+			ConnectionDAO.getSession().getTransaction().begin();
 			ConnectionDAO.getSession().save(user);
-			ConnectionDAO.getSession().beginTransaction().commit();
+			ConnectionDAO.getSession().getTransaction().commit();
 			add=true;
 		} catch (Exception e) {
 			System.out.println(e);
